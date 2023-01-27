@@ -42,14 +42,16 @@ to select the lines for your substitute (search and replace). with no 'g' flag, 
 
 ## testing and layout
 
-describe: Pizza(name)
+describe: Pizza(toppings, size)
 
-test: "creates an object that has properties for size, pepperoni, grnPep, onion, olive"
+test: "should return object with two properties. one array with toppings and a size property"
 code:
-expected Output: Pizza {for:, size:, pepperoni:, grnPep:, onion:, olive:};
+let pizza1 = new Pizza(['olive','green pepper'], 'small');
+expected Output: Pizza { toppings: ['olive','green pepper'], size: 'small' }
 
+describe: Pizza.prototype.total()
 
-test: "It should return null if ${usrNumbr} < 0"
+test: "should "
 code:
 const num = -1;
 createArr(num);
