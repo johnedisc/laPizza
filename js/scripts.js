@@ -19,4 +19,3 @@ Pizza.prototype.total = function() {
 let pizza1 = new Pizza(['pepperoni'], 'med');
 let pizza2 = new Pizza(['pepperoni','olive'], 'med');
 
-console.log(pizza1.total(), pizza2.total());

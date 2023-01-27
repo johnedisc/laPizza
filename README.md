@@ -71,34 +71,6 @@ let pizza1 = new Pizza(['pepperoni','olive'], 'med');
 pizza1.total()
 expected Output: 19.29, 20.59
 
-test: "Should return "Won't you be my neighbor?" if indexNumbr is 3"
-code:
-const num = 3;
-numToKeyword(num);
-expected Output: "Won't you be my neighbor?"
-
-describe: negativeCheck() ==> createArr() ==> numToKeyword()
-
-test: "giving positive number to negativeCheck() should return an array from createArr()"
-code:
-const num = 1;
-negativeCheck(num);
-expected Output: [0,1]
-
-test: "giving positive number to negativeCheck() should return array with keywords inserted from numToKeyword()"
-code:
-const num = 3;
-negativeCheck(num);
-expected Output: [0,'beep!','boop!','won\'t you be my neighbor']
-
-describe: checkName(name)
-
-test: "should return 'hello' if user doesn't provide name"
-code:
-const name = '';
-negativeCheck(name);
-expected Output: hello
-
 ## license
 
 feel free to get in touch at [christopher(dot)johnedis(at)gmail(dot)com](christopher.johnedis@gmail.com)
