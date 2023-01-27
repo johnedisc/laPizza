@@ -16,6 +16,6 @@ Pizza.prototype.total = function() {
   return prices.size[this.size];
 }
 
-let pizza1 = new Pizza([], 'sm');
+let pizza1 = new Pizza([], 'lg');
 
 console.log(pizza1.total());

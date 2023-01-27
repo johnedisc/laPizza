@@ -57,13 +57,12 @@ let pizza1 = new Pizza([], 'sm');
 pizza1.total()
 expected Output: 14.99
 
-describe: numToKeyword(indexNumbr)
-
-test: "Should take a number and return Beep! if number = 1"
+test: "should return 17.99 for med and 22.99 if pizza is large"
 code:
-const num = 1;
-numToKeyword(num);
-expected Output: Beep!
+let pizza1 = new Pizza([], 'med');
+let pizza1 = new Pizza([], 'lg');
+pizza1.total()
+expected Output: 17.99, 22.99
 
 forgot to convert indexNumbr to a string!!
 
