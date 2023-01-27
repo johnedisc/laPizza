@@ -51,11 +51,11 @@ expected Output: Pizza { toppings: ['olive','green pepper'], size: 'small' }
 
 describe: Pizza.prototype.total()
 
-test: "should "
+test: "should return 14.99 if pizza is small"
 code:
-const num = -1;
-createArr(num);
-expected Output: null
+let pizza1 = new Pizza([], 'sm');
+pizza1.total()
+expected Output: 14.99
 
 describe: numToKeyword(indexNumbr)
 

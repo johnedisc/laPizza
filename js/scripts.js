@@ -5,6 +5,17 @@ function Pizza(toppings,size) {
   this.size = size;
 }
 
-let pizza1 = new Pizza(['olive','green pepper'], 'small');
+Pizza.prototype.total = function() {
+  const prices = {
+    size: {
+      sm: 14.99,
+      med: 17.99,
+      lg: 22.99
+    }
+  }
+  return prices.size[this.size];
+}
 
-console.log(pizza1);
+let pizza1 = new Pizza([], 'sm');
+
+console.log(pizza1.total());
