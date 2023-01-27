@@ -13,9 +13,10 @@ Pizza.prototype.total = function() {
       lg: 22.99
     }
   }
-  return prices.size[this.size];
+  return prices.size[this.size] + (this.toppings.length * 1.30);
 }
 
-let pizza1 = new Pizza([], 'lg');
+let pizza1 = new Pizza(['pepperoni'], 'med');
+let pizza2 = new Pizza(['pepperoni','olive'], 'med');
 
-console.log(pizza1.total());
+console.log(pizza1.total(), pizza2.total());

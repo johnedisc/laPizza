@@ -46,8 +46,8 @@ describe: Pizza(toppings, size)
 
 test: "should return object with two properties. one array with toppings and a size property"
 code:
-let pizza1 = new Pizza(['olive','green pepper'], 'small');
-expected Output: Pizza { toppings: ['olive','green pepper'], size: 'small' }
+let pizza1 = new Pizza(['olive','grnPep'], 'small');
+expected Output: Pizza { toppings: ['olive','grnPep'], size: 'small' }
 
 describe: Pizza.prototype.total()
 
@@ -64,13 +64,12 @@ let pizza1 = new Pizza([], 'lg');
 pizza1.total()
 expected Output: 17.99, 22.99
 
-forgot to convert indexNumbr to a string!!
-
-test: "Should return Boop! if indexNumbr is 2"
+test: "should return 1.30 more for every topping added"
 code:
-const num = 2;
-numToKeyword(num);
-expected Output: Boop!
+let pizza1 = new Pizza(['pepperoni'], 'med');
+let pizza1 = new Pizza(['pepperoni','olive'], 'med');
+pizza1.total()
+expected Output: 19.29, 20.59
 
 test: "Should return "Won't you be my neighbor?" if indexNumbr is 3"
 code:
