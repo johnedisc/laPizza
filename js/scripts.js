@@ -13,8 +13,8 @@ Pizza.prototype.total = function() {
       lg: 22.99
     }
   }
-  const sizeCost = 0; 
-  const topCost = 0;
+  let sizeCost = 0; 
+  let topCost = 0;
   if (prices.size[this.size]) {
     sizeCost = prices.size[this.size];
   }
@@ -22,22 +22,38 @@ Pizza.prototype.total = function() {
   
 }
 
-Pizza.prototype.addTopping(topping) = function() {
+Pizza.prototype.addTopping = function(topping) {
   this.toppings.push(topping);
 }
 
 // ui
 function buildPizza(e) {
   //e.preventDefault;
-  console.log('dsflkj');
   let pizza = new Pizza();
 
-  console.log(pizza);
+  const sizesEl = document.querySelectorAll('div#size');
+  const toppingsEl = document.querySelectorAll('#toppings');
+  const totalEl = document.querySelector('.total');
+  console.log(sizesEl);
+  console.log(toppingsEl);
 
-  document.querySelector('div#size>*').addEventListener('click', (e) => {
-    console.log(event.target.id);
-     
+  sizesEl.forEach(el => {
+    el.addEventListener('click', (e) => {
+      pizza.size = e.target.id;
+      totalEl.innerText = pizza.total();
+      console.log(e.target.id);
+    });
   });
+
+  toppingsEl.forEach(el => {
+    el.addEventListener('click', (e) => {
+      pizza.toppings.push(e.target.id);
+      totalEl.innerText = pizza.total();
+      console.log(pizza);
+      console.log(e.target.id);
+    });
+  });
+  
   
 }
 
