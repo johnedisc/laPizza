@@ -1,4 +1,4 @@
-# lapizza
+# laPizza
 
 #### by [johnedisc](https://johnedisc.github.io/portfolio/)
 

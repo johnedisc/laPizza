@@ -1,8 +1,8 @@
 // business
 
-function Pizza(toppings,size) {
-  this.toppings = toppings;
-  this.size = size;
+function Pizza() {
+  this.toppings = [];
+  this.size = '';
 }
 
 Pizza.prototype.total = function() {
@@ -13,22 +13,32 @@ Pizza.prototype.total = function() {
       lg: 22.99
     }
   }
-  return prices.size[this.size] + (this.toppings.length * 1.30);
+  const sizeCost = 0; 
+  const topCost = 0;
+  if (prices.size[this.size]) {
+    sizeCost = prices.size[this.size];
+  }
+  return sizeCost + (this.toppings.length * 1.30);
+  
 }
 
-let pizza1 = new Pizza(['pepperoni'], 'med');
-let pizza2 = new Pizza(['pepperoni','olive'], 'med');
-
+Pizza.prototype.addTopping(topping) {
+  this.toppings.push(topping);
+}
 
 // ui
 function buildPizza(e) {
-  // e.preventDefault;
-  const pizza = new Pizza
+  //e.preventDefault;
+  console.log('dsflkj');
+  let pizza = new Pizza();
 
-  document.getElementById('size').addEventListener('click', (e) => {
+  console.log(pizza);
+
+  document.querySelector('div#size>*').addEventListener('click', (e) => {
+    console.log(event.target.id);
      
   });
   
 }
 
-window.addEventListener('load', buildPizza())
+window.addEventListener('load', buildPizza);
