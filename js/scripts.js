@@ -22,7 +22,7 @@ Pizza.prototype.total = function() {
   
 }
 
-Pizza.prototype.addTopping(topping) {
+Pizza.prototype.addTopping(topping) = function() {
   this.toppings.push(topping);
 }
 
