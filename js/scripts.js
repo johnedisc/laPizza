@@ -19,3 +19,16 @@ Pizza.prototype.total = function() {
 let pizza1 = new Pizza(['pepperoni'], 'med');
 let pizza2 = new Pizza(['pepperoni','olive'], 'med');
 
+
+// ui
+function buildPizza(e) {
+  // e.preventDefault;
+  const pizza = new Pizza
+
+  document.getElementById('size').addEventListener('click', (e) => {
+     
+  });
+  
+}
+
+window.addEventListener('load', buildPizza())
