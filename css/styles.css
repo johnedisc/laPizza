@@ -1,15 +1,92 @@
+:root {
+  --gutter: .5rem;
+}
+
+body {
+  font-family: 'Kadwa', serif;
+}
+
+.header {
+  bottom: 0;
+  display: grid;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+
+.headerBackground {
+  background-color: white;
+  height: 90%;
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+
+.headerContent {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  font-size: 1.1rem;
+}
+
+.buy, .price {
+  grid-column: span 1;
+}
+
+.name {
+  padding: 0 var(--gutter);
+  grid-column: span 2;
+}
+
+
 .grid {
+  box-sizing: border-box;
   display: grid;
   grid-template-columns: repeat(16,1fr);
+  grid-template-rows: repeat(8,1fr);
+  padding: calc(var(--gutter)/2);
 }
 
 .grid-block {
   grid-row: span 2;
   grid-column: span 8;
+  padding: calc(var(--gutter)/2);
 }
 
+#size {
+}
+
+.gridMenuItem {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  background-color: #BCDFFF;
+}
+
+h3 {
+  height: 40%;
+  width: 30%;
+  object-fit: cover;
+  object-position: center;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-size: 1.5rem;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*
 .grid > * {
   border: 1px solid black;
 }
+.gridMenuItem > * {
+  border: 1px solid black;
+}
+*/
 
+#sm, #med, #lg {
+  background-color: #D3DBE4;
+}
 
