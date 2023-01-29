@@ -32,7 +32,7 @@ function buildPizza(e) {
   let pizza = new Pizza();
 
   const sizesEl = document.querySelectorAll('div#size');
-  const toppingsEl = document.querySelectorAll('#toppings');
+  const toppingsEl = document.querySelectorAll('.toppings');
   const totalEl = document.querySelector('.total');
   console.log(sizesEl);
   console.log(toppingsEl);
