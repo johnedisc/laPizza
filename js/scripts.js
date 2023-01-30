@@ -18,7 +18,7 @@ Pizza.prototype.total = function() {
   if (prices.size[this.size]) {
     sizeCost = prices.size[this.size];
   }
-  return sizeCost + (this.toppings.length * 1.30);
+  return (sizeCost + (this.toppings.length * 1.30)).toFixed(2);
   
 }
 
@@ -34,6 +34,7 @@ function buildPizza(e) {
   const sizesEl = document.querySelectorAll('div#size');
   const toppingsEl = document.querySelectorAll('.toppings');
   const totalEl = document.querySelector('.total');
+  const buyEl = document.querySelector('.buy');
   console.log(sizesEl);
   console.log(toppingsEl);
 
@@ -47,13 +48,23 @@ function buildPizza(e) {
 
   toppingsEl.forEach(el => {
     el.addEventListener('click', (e) => {
-      pizza.toppings.push(e.target.id);
-      totalEl.innerText = pizza.total();
-      console.log(pizza);
-      console.log(e.target.id);
+      
+      let target = e.target.id;
+      if (!e.target.id) {
+        target = e.target.children[0].id;
+      }
+        if (!pizza.toppings.includes(target)) {
+          pizza.toppings.push(target);
+          totalEl.innerText = pizza.total();
+        }
+      
     });
   });
   
+  buyEl.addEventListener('click', (e) => {
+    totalEl.innerText = '';
+    buildPizza;
+  });
   
 }
 
