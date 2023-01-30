@@ -1,4 +1,4 @@
-# laPizza
+# [laPizza](https://johnedisc.github.io/laPizza/)
 
 #### by [johnedisc](https://johnedisc.github.io/portfolio/)
 
@@ -12,11 +12,11 @@
 
 ## description
 
-*
+* site uses CSS grid to layout pizza sizes and toppings which do not allow more than one size or to add a toppoing twice. it also uses a fixed header which i had been wanting to experiment with. the totaling and toppings choices are all accomplished using objects and arrays.
 
 ## setup/installation requirements
 
-* visit the site [here]()
+* visit the site [here](https://johnedisc.github.io/laPizza/)
 * clone down the [repository from github]() inside the directory of your choosing
 ```bash
 git clone 
@@ -26,19 +26,7 @@ git clone
 
 ## known Bugs
 
-*
-
-## tech learned in making the site
-
-* vim: use 
-```bash
-:[range]s/char/char replace/g
-
-# for example to select lines 1-10, globally
-
-:1,10s/char/new char/g
-``` 
-to select the lines for your substitute (search and replace). with no 'g' flag, this will only return the first result on a line.
+* does not currently show you what toppings you have choosen
 
 ## testing and layout
 
